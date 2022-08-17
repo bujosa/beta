@@ -1,7 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract MyContract {
+contract Ownable {
+    address owner;
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "must be owner");
+    }
+}
+
+contract MyContract is Ownable {
     string secret;
     address owner;
 

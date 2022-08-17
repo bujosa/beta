@@ -11,7 +11,6 @@ contract Ownable {
 
 contract MyContract is Ownable {
     string secret;
-    address owner;
 
     constructor(string memory _secret) public {
         secret = _secret;

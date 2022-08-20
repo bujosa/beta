@@ -10,6 +10,10 @@ contract Ownable {
     }
 }
 
+contract SecretVault {
+    string secret;
+}
+
 contract MyContract is Ownable {
     string secret;
 

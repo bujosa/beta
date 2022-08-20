@@ -6,6 +6,7 @@ contract Ownable {
 
     modifier onlyOwner() {
         require(msg.sender == owner, "must be owner");
+        _;
     }
 }
 
@@ -14,7 +15,7 @@ contract MyContract is Ownable {
 
     constructor(string memory _secret) public {
         secret = _secret;
-        owner = msg.sender;
+        super;
     }
 
     function getSecret() public view returns (string memory) {

@@ -15,6 +15,7 @@ contract SecretVault {
 
     constructor(string memory _secret) {
         secret = _secret;
+
         super;
     }
 
@@ -28,7 +29,9 @@ contract MyContract is Ownable {
 
     constructor(string memory _secret) {
         SecretVault _secretVault = new SecretVault(_secret);
+        
         secretVault = address(_secretVault);
+
         super;
     }
 

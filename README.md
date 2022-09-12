@@ -1,2 +1,2 @@
 # Beta
-This is a simple project related with Solidity
+This is a simple project related with Solidity.
